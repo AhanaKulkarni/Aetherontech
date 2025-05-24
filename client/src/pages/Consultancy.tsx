@@ -14,38 +14,32 @@ export default function Consultancy() {
     {
       icon: "fas fa-rocket",
       title: "MVP Development",
-      description: "Rapid prototyping and minimum viable product development to validate your concepts and accelerate time-to-market.",
-      price: "Starting at $50K"
+      description: "Transform your vision into a market-ready product with rapid prototyping and strategic development approaches."
     },
     {
-      icon: "fas fa-magic",
-      title: "AI × AR Integration",
-      description: "Cutting-edge artificial intelligence combined with augmented reality to create revolutionary user experiences.",
-      price: "Starting at $125K"
+      icon: "fas fa-brain",
+      title: "AI Integration",
+      description: "Implement cutting-edge artificial intelligence solutions that enhance user experiences and operational efficiency."
     },
     {
-      icon: "fas fa-palette",
-      title: "UI/UX Flow Design",
-      description: "Premium design systems and user experience optimization that converts visitors into loyal customers.",
-      price: "Starting at $35K"
+      icon: "fas fa-eye",
+      title: "AR/VR Solutions",
+      description: "Create immersive reality experiences that redefine how users interact with your digital products."
     },
     {
       icon: "fas fa-cogs",
-      title: "Technical Architecture",
-      description: "Scalable system architecture and technology stack recommendations for enterprise-grade applications.",
-      price: "Starting at $75K"
+      title: "System Architecture",
+      description: "Design scalable, robust infrastructure that grows with your business and handles enterprise-level demands."
+    },
+    {
+      icon: "fas fa-palette",
+      title: "Product Design",
+      description: "Craft intuitive user experiences and sophisticated interfaces that drive engagement and conversion."
     },
     {
       icon: "fas fa-chart-line",
-      title: "Growth Strategy",
-      description: "Data-driven growth strategies and market penetration plans to maximize your product's success potential.",
-      price: "Starting at $60K"
-    },
-    {
-      icon: "fas fa-shield-alt",
-      title: "Security Audit",
-      description: "Comprehensive security assessment and implementation of enterprise-level security protocols and standards.",
-      price: "Starting at $40K"
+      title: "Strategic Consulting",
+      description: "Navigate complex technology decisions with expert guidance on market positioning and growth strategies."
     }
   ];
 
@@ -194,28 +188,23 @@ export default function Consultancy() {
             </div>
           </motion.div>
 
-          {/* CTA Section */}
+          {/* Partnership Form Section */}
           <motion.div 
-            className="text-center"
+            className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.2 }}
           >
             <div className="glassmorphism p-12 rounded-2xl max-w-4xl mx-auto">
-              <h3 className="text-3xl font-space font-bold mb-6">Ready to Build the Future?</h3>
-              <p className="text-xl text-gray-300 mb-8">
-                Book a discovery call with our experts and transform your vision into a market-leading product.
+              <h3 className="text-3xl font-space font-light mb-6">Partner With Us</h3>
+              <p className="text-lg text-white/70 mb-8 font-light leading-relaxed">
+                Ready to transform your business with cutting-edge technology? Tell us about your vision and we'll craft a tailored solution.
               </p>
-              <div className="flex flex-col md:flex-row gap-6 justify-center">
-                <Link href="/contact" className="cursor-hover">
-                  <Button className="electric-blue-bg hover:bg-[hsl(var(--electric-blue-light))] text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 glow-effect">
-                    Book Discovery Call
-                  </Button>
-                </Link>
-                <Button variant="outline" className="border-[hsl(var(--electric-blue))] text-[hsl(var(--electric-blue))] hover:bg-[hsl(var(--electric-blue))] hover:text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 cursor-hover">
-                  View Case Studies
+              <Link href="/contact" className="cursor-hover">
+                <Button className="steel-accent-bg hover:bg-[hsl(var(--steel-blue-light))] text-black px-8 py-3 rounded-xl font-normal text-base transition-all duration-300 subtle-glow">
+                  Start a Partnership
                 </Button>
-              </div>
+              </Link>
             </div>
           </motion.div>
         </div>

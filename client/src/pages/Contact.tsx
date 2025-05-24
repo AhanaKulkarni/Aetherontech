@@ -96,10 +96,10 @@ export default function Contact() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-7xl font-space font-bold mb-8">
-              Let's <span className="gradient-text">Collaborate</span>
+            <h1 className="text-4xl md:text-6xl font-space font-light mb-8">
+              Let's <span className="metallic-gradient">Collaborate</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg text-white/70 max-w-3xl mx-auto font-light leading-relaxed">
               Ready to transform your vision into reality? Whether you're seeking partnership, consultation, 
               or want to discuss a revolutionary project, we're here to make it happen.
             </p>
@@ -113,7 +113,7 @@ export default function Contact() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <h2 className="text-3xl font-space font-bold mb-8">Start Your Journey</h2>
+              <h2 className="text-2xl font-space font-light mb-8">Partnership Inquiry</h2>
               
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -264,9 +264,9 @@ export default function Contact() {
                   <Button 
                     type="submit" 
                     disabled={isSubmitting}
-                    className="w-full electric-blue-bg hover:bg-[hsl(var(--electric-blue-light))] text-black font-semibold py-4 rounded-lg transition-all duration-300 glow-effect cursor-hover"
+                    className="w-full steel-accent-bg hover:bg-[hsl(var(--steel-blue-light))] text-black font-normal py-3 rounded-xl transition-all duration-300 subtle-glow cursor-hover"
                   >
-                    {isSubmitting ? "Sending..." : "Send Message"}
+                    {isSubmitting ? "Sending..." : "Submit Partnership Request"}
                   </Button>
                 </form>
               </Form>

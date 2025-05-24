@@ -153,7 +153,6 @@ export default function Projects() {
                   description={project.description}
                   category={project.category}
                   status={project.status}
-                  valuation={project.valuation}
                   image={project.image}
                   categoryColor={project.categoryColor}
                   onClick={() => handleProjectClick(project.id)}
