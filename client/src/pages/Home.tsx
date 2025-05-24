@@ -2,148 +2,169 @@ import { PageTransition } from "@/components/ui/page-transition";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import Spline from '@splinetool/react-spline';
 
 export default function Home() {
+  const [splineLoaded, setSplineLoaded] = useState(false);
+  const [currentText, setCurrentText] = useState("");
+  const fullText = "Welcome to Aetheron.AI";
+
   useEffect(() => {
-    document.title = "Aetheron.AI - Every Problem Has a Product";
+    document.title = "Aetheron.AI - Project Marketplace";
+    
+    // Typewriter effect
+    let index = 0;
+    const typeWriter = setInterval(() => {
+      if (index < fullText.length) {
+        setCurrentText(fullText.slice(0, index + 1));
+        index++;
+      } else {
+        clearInterval(typeWriter);
+      }
+    }, 100);
+
+    return () => clearInterval(typeWriter);
   }, []);
 
   return (
     <PageTransition>
-      <div className="min-h-screen pt-24">
+      <div className="min-h-screen pt-20">
         {/* Hero Section */}
-        <section className="hero-gradient min-h-screen flex items-center justify-center relative overflow-hidden">
+        <section className="hero-ambient min-h-screen flex items-center justify-center relative overflow-hidden">
+          {/* Spline 3D Robot Background */}
+          <div className="spline-container">
+            <Spline
+              scene="https://prod.spline.design/geJZ9gfFaLE-jHnx/scene.splinecode"
+              onLoad={() => setSplineLoaded(true)}
+            />
+          </div>
+
           <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
-            {/* Floating 3D Robot Placeholder */}
-            <motion.div 
-              className="floating mb-12"
+            <motion.div
+              className="mb-8"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.2 }}
             >
-              <div className="w-32 h-32 mx-auto glassmorphism rounded-full flex items-center justify-center glow-effect cursor-hover">
-                <i className="fas fa-robot text-5xl electric-blue"></i>
-              </div>
+              <h2 className="text-2xl md:text-3xl font-light text-white/60 mb-4">
+                {currentText}
+                <span className="animate-pulse">|</span>
+              </h2>
             </motion.div>
             
             <motion.h1 
-              className="text-6xl md:text-8xl font-space font-bold mb-8"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              Every Problem
-              <span className="gradient-text block">Has a Product</span>
-            </motion.h1>
-            
-            <motion.p 
-              className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto"
+              className="text-5xl md:text-7xl font-space font-light mb-8 leading-tight"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              Aetheron.AI transforms visionary ideas into groundbreaking products through 
-              cutting-edge artificial intelligence and innovative design.
-            </motion.p>
+              Transform Ideas Into
+              <span className="metallic-gradient block font-normal">Reality</span>
+            </motion.h1>
             
-            <motion.div 
-              className="flex flex-col md:flex-row gap-6 justify-center"
+            <motion.p 
+              className="text-lg md:text-xl text-white/70 mb-12 max-w-3xl mx-auto font-light leading-relaxed"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
             >
+              A curated marketplace where visionary projects meet cutting-edge technology. 
+              We build the future, one breakthrough product at a time.
+            </motion.p>
+            
+            <motion.div 
+              className="flex flex-col md:flex-row gap-4 justify-center"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1 }}
+            >
               <Link href="/projects" className="cursor-hover">
-                <Button className="electric-blue-bg hover:bg-[hsl(var(--electric-blue-light))] text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 glow-effect">
-                  Explore Projects
+                <Button className="steel-accent-bg hover:bg-[hsl(var(--steel-blue-light))] text-black px-8 py-3 rounded-xl font-normal text-base transition-all duration-300 subtle-glow">
+                  Explore Marketplace
                 </Button>
               </Link>
               <Link href="/consultancy" className="cursor-hover">
-                <Button variant="outline" className="border-[hsl(var(--electric-blue))] text-[hsl(var(--electric-blue))] hover:bg-[hsl(var(--electric-blue))] hover:text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
-                  Book Consultation
+                <Button variant="outline" className="border-[hsl(var(--steel-blue))] text-[hsl(var(--steel-blue))] hover:bg-[hsl(var(--steel-blue))] hover:text-black px-8 py-3 rounded-xl font-normal text-base transition-all duration-300">
+                  Partner With Us
                 </Button>
               </Link>
             </motion.div>
           </div>
-          
-          {/* Background Elements */}
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-[hsl(var(--electric-blue))] opacity-10 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[hsl(var(--electric-blue))] opacity-5 rounded-full blur-3xl"></div>
-          </div>
         </section>
 
-        {/* Features Section */}
-        <section className="py-24 dark-gray-bg">
+        {/* Capabilities Section */}
+        <section className="py-32 charcoal-bg">
           <div className="max-w-7xl mx-auto px-6">
             <motion.h2 
-              className="text-4xl md:text-6xl font-space font-bold text-center mb-16"
+              className="text-4xl md:text-5xl font-space font-light text-center mb-20"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              The Future is <span className="gradient-text">Now</span>
+              Our <span className="metallic-gradient">Expertise</span>
             </motion.h2>
             
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-12">
               {[
                 {
-                  icon: "fas fa-brain",
-                  title: "AI-Powered Solutions",
-                  description: "Revolutionary artificial intelligence that adapts, learns, and evolves to solve complex real-world challenges."
+                  icon: "fas fa-microchip",
+                  title: "AI Integration",
+                  description: "Advanced machine learning solutions that transform business operations and user experiences."
                 },
                 {
-                  icon: "fas fa-cube",
-                  title: "3D Innovation",
-                  description: "Immersive augmented reality experiences that bridge the gap between digital and physical worlds."
+                  icon: "fas fa-eye",
+                  title: "AR/VR Development",
+                  description: "Immersive reality applications that redefine how users interact with digital environments."
                 },
                 {
-                  icon: "fas fa-rocket",
-                  title: "Rapid Deployment",
-                  description: "From concept to market in record time with our streamlined development and deployment pipeline."
+                  icon: "fas fa-cogs",
+                  title: "System Architecture",
+                  description: "Scalable, robust platforms built for enterprise-grade performance and reliability."
                 }
               ].map((feature, index) => (
                 <motion.div
                   key={index}
-                  className="glassmorphism p-8 rounded-2xl glow-effect cursor-hover"
+                  className="glassmorphism p-10 rounded-2xl subtle-glow cursor-hover text-center"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
                   viewport={{ once: true }}
-                  whileHover={{ scale: 1.02, y: -5 }}
+                  whileHover={{ y: -8 }}
                 >
-                  <div className="electric-blue text-4xl mb-6">
+                  <div className="steel-accent text-3xl mb-8">
                     <i className={feature.icon}></i>
                   </div>
-                  <h3 className="text-2xl font-space font-bold mb-4">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
+                  <h3 className="text-xl font-space font-normal mb-6">{feature.title}</h3>
+                  <p className="text-white/60 leading-relaxed font-light">{feature.description}</p>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Showcase Section */}
-        <section className="py-24">
+        {/* Vision Section */}
+        <section className="py-32">
           <div className="max-w-7xl mx-auto px-6">
-            <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div className="grid md:grid-cols-2 gap-20 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-4xl md:text-5xl font-space font-bold mb-8">
-                  Transforming <span className="gradient-text">Industries</span>
+                <h2 className="text-4xl md:text-5xl font-space font-light mb-8 leading-tight">
+                  Building Tomorrow's
+                  <span className="metallic-gradient block">Solutions Today</span>
                 </h2>
-                <p className="text-xl text-gray-300 mb-8">
-                  Our marketplace connects visionary projects with cutting-edge technology, 
-                  creating solutions that redefine what's possible.
+                <p className="text-lg text-white/70 mb-10 leading-relaxed font-light">
+                  Every breakthrough starts with a vision. Our marketplace connects ambitious projects 
+                  with the technology and expertise needed to transform industries and shape the future.
                 </p>
                 <Link href="/projects" className="cursor-hover">
-                  <Button className="electric-blue-bg hover:bg-[hsl(var(--electric-blue-light))] text-black px-8 py-4 rounded-lg font-semibold transition-all duration-300 glow-effect">
-                    View All Projects
+                  <Button className="steel-accent-bg hover:bg-[hsl(var(--steel-blue-light))] text-black px-8 py-3 rounded-xl font-normal transition-all duration-300 subtle-glow">
+                    Discover Projects
                   </Button>
                 </Link>
               </motion.div>
@@ -155,11 +176,11 @@ export default function Home() {
                 viewport={{ once: true }}
               >
                 <img 
-                  src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
-                  alt="Futuristic tech office workspace" 
-                  className="rounded-2xl shadow-2xl glow-effect w-full h-auto" 
+                  src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+                  alt="Advanced technology development" 
+                  className="rounded-2xl shadow-2xl subtle-glow w-full h-auto" 
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent rounded-2xl"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent rounded-2xl"></div>
               </motion.div>
             </div>
           </div>

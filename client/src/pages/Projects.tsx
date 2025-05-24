@@ -23,69 +23,63 @@ export default function Projects() {
   const projects = [
     {
       id: "ar-interior",
-      title: "AR Interior Designer",
-      description: "Revolutionary augmented reality app that transforms how we design and visualize interior spaces in real-time.",
+      title: "Furnish AR",
+      description: "Revolutionary augmented reality platform that transforms interior design through real-time 3D visualization and AI-powered recommendations.",
       category: "AR/VR",
       status: "Available Now",
-      valuation: "$2.5M Valuation",
       image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
       categoryType: "ar",
-      categoryColor: "electric-blue-bg"
+      categoryColor: "steel-accent-bg"
     },
     {
-      id: "ai-diagnostics",
-      title: "Neural Diagnostics AI",
-      description: "Advanced machine learning platform that revolutionizes medical diagnosis with 99.7% accuracy rates.",
+      id: "neural-diagnostics",
+      title: "Neural Engine",
+      description: "Advanced machine learning platform currently in development. Breakthrough AI technology coming soon.",
       category: "AI Health",
-      status: "In Development",
-      valuation: "$8.2M Valuation",
+      status: "Upcoming",
       image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
       categoryType: "ai",
-      categoryColor: "bg-green-500"
+      categoryColor: "bg-slate-500"
     },
     {
       id: "quantum-analytics",
       title: "Quantum Analytics",
-      description: "Next-generation quantum computing solutions for complex data analysis and cryptographic applications.",
+      description: "Next-generation quantum computing solutions for complex data analysis. Revolutionary technology in development.",
       category: "Quantum",
-      status: "Research Phase",
-      valuation: "$15M Valuation",
+      status: "Upcoming",
       image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
       categoryType: "ai",
-      categoryColor: "bg-purple-500"
+      categoryColor: "bg-slate-500"
     },
     {
       id: "autonomous-fleet",
-      title: "Autonomous Fleet",
-      description: "Intelligent robotics platform for autonomous logistics and warehouse management systems.",
+      title: "Autonomous Systems",
+      description: "Intelligent robotics platform for autonomous operations. Next-generation technology coming soon.",
       category: "Robotics",
-      status: "Beta Testing",
-      valuation: "$12.8M Valuation",
+      status: "Upcoming",
       image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
       categoryType: "robotics",
-      categoryColor: "bg-orange-500"
+      categoryColor: "bg-slate-500"
     },
     {
-      id: "defi-analytics",
-      title: "DeFi Analytics Pro",
-      description: "Advanced decentralized finance platform with AI-powered market prediction and risk assessment.",
+      id: "defi-platform",
+      title: "DeFi Solutions",
+      description: "Advanced decentralized finance platform with AI-powered insights. Revolutionary fintech coming soon.",
       category: "FinTech",
-      status: "Live",
-      valuation: "$6.4M Valuation",
+      status: "Upcoming",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
       categoryType: "fintech",
-      categoryColor: "bg-yellow-500"
+      categoryColor: "bg-slate-500"
     },
     {
-      id: "cognitive-engine",
+      id: "cognitive-ai",
       title: "Cognitive Engine",
-      description: "Revolutionary neural network architecture that mimics human cognitive processes for enhanced AI reasoning.",
+      description: "Revolutionary neural network architecture that enhances AI reasoning capabilities. Advanced technology in development.",
       category: "Deep Learning",
-      status: "Prototype",
-      valuation: "$22M Valuation",
+      status: "Upcoming",
       image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
       categoryType: "ai",
-      categoryColor: "bg-pink-500"
+      categoryColor: "bg-slate-500"
     }
   ];
 
@@ -109,12 +103,12 @@ export default function Projects() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-7xl font-space font-bold mb-8">
-              Project <span className="gradient-text">Marketplace</span>
+            <h1 className="text-4xl md:text-6xl font-space font-light mb-8">
+              Project <span className="metallic-gradient">Marketplace</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover frontier technology projects that are reshaping the world. 
-              Each solution represents the pinnacle of AI innovation and human ingenuity.
+            <p className="text-lg text-white/70 max-w-3xl mx-auto font-light leading-relaxed">
+              Discover breakthrough technology projects that shape tomorrow. 
+              Each solution represents innovation at the intersection of vision and execution.
             </p>
           </motion.div>
 

@@ -5,7 +5,6 @@ interface ProjectCardProps {
   description: string;
   category: string;
   status: string;
-  valuation: string;
   image: string;
   onClick?: () => void;
   categoryColor?: string;
@@ -16,24 +15,18 @@ export default function ProjectCard({
   description,
   category,
   status,
-  valuation,
   image,
   onClick,
-  categoryColor = "electric-blue-bg"
+  categoryColor = "steel-accent-bg"
 }: ProjectCardProps) {
   const getStatusColor = (status: string) => {
     switch (status.toLowerCase()) {
       case 'available now':
-      case 'live':
-      case 'beta testing':
-        return 'success';
-      case 'in development':
-      case 'prototype':
-        return 'electric-blue';
-      case 'research phase':
-        return 'text-orange-400';
+        return 'steel-accent';
+      case 'upcoming':
+        return 'text-white/50';
       default:
-        return 'electric-blue';
+        return 'steel-accent';
     }
   };
 
@@ -41,7 +34,7 @@ export default function ProjectCard({
     <motion.div
       className="project-card glassmorphism rounded-2xl overflow-hidden cursor-hover"
       onClick={onClick}
-      whileHover={{ scale: 1.02 }}
+      whileHover={{ y: -4 }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
     >
       <img 
@@ -49,20 +42,19 @@ export default function ProjectCard({
         alt={title}
         className="w-full h-48 object-cover" 
       />
-      <div className="p-6">
-        <div className="flex items-center justify-between mb-4">
-          <span className={`${categoryColor} text-black px-3 py-1 rounded-full text-sm font-semibold`}>
+      <div className="p-8">
+        <div className="flex items-center justify-between mb-6">
+          <span className={`${categoryColor} text-black px-4 py-1.5 rounded-full text-xs font-normal`}>
             {category}
           </span>
-          <div className="electric-blue">
-            <i className="fas fa-external-link-alt"></i>
+          <div className="steel-accent">
+            <i className="fas fa-arrow-right text-sm"></i>
           </div>
         </div>
-        <h3 className="text-2xl font-space font-bold mb-3">{title}</h3>
-        <p className="text-gray-300 mb-4">{description}</p>
+        <h3 className="text-xl font-space font-normal mb-4">{title}</h3>
+        <p className="text-white/70 mb-6 text-sm leading-relaxed font-light">{description}</p>
         <div className="flex items-center justify-between">
-          <span className={`${getStatusColor(status)} font-semibold`}>{status}</span>
-          <span className="text-gray-400">{valuation}</span>
+          <span className={`${getStatusColor(status)} font-normal text-sm`}>{status}</span>
         </div>
       </div>
     </motion.div>
