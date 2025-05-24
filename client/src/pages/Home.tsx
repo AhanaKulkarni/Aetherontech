@@ -94,7 +94,7 @@ export default function Home() {
         </section>
 
         {/* Capabilities Section */}
-        <section className="py-32 charcoal-bg">
+        <section className="py-32 charcoal-bg bg-gradient-subtle">
           <div className="max-w-7xl mx-auto px-6">
             <motion.h2 
               className="text-4xl md:text-5xl font-space font-light text-center mb-20"

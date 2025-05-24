@@ -12,6 +12,21 @@ export default function Consultancy() {
 
   const services = [
     {
+      icon: "fas fa-lightbulb",
+      title: "Strategic Consultancy",
+      description: "Expert guidance on technology roadmaps, market positioning, and strategic decision-making for complex digital transformations."
+    },
+    {
+      icon: "fas fa-exchange-alt",
+      title: "Tech Transfer Solutions",
+      description: "Seamless knowledge transfer and technology implementation from research to commercial applications with ongoing support."
+    },
+    {
+      icon: "fas fa-tag",
+      title: "White Label Solutions",
+      description: "Complete turnkey products and platforms ready for rebrand and deployment under your company's identity."
+    },
+    {
       icon: "fas fa-rocket",
       title: "MVP Development",
       description: "Transform your vision into a market-ready product with rapid prototyping and strategic development approaches."
@@ -25,21 +40,6 @@ export default function Consultancy() {
       icon: "fas fa-eye",
       title: "AR/VR Solutions",
       description: "Create immersive reality experiences that redefine how users interact with your digital products."
-    },
-    {
-      icon: "fas fa-cogs",
-      title: "System Architecture",
-      description: "Design scalable, robust infrastructure that grows with your business and handles enterprise-level demands."
-    },
-    {
-      icon: "fas fa-palette",
-      title: "Product Design",
-      description: "Craft intuitive user experiences and sophisticated interfaces that drive engagement and conversion."
-    },
-    {
-      icon: "fas fa-chart-line",
-      title: "Strategic Consulting",
-      description: "Navigate complex technology decisions with expert guidance on market positioning and growth strategies."
     }
   ];
 
@@ -93,10 +93,10 @@ export default function Consultancy() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-7xl font-space font-bold mb-8">
-              Premium <span className="gradient-text">Consultancy</span>
+            <h1 className="text-4xl md:text-6xl font-space font-light mb-8">
+              Professional <span className="metallic-gradient">Services</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg text-white/70 max-w-3xl mx-auto font-light leading-relaxed">
               Transform your vision into reality with our world-class strategy and product consulting. 
               We partner with industry leaders to create breakthrough innovations.
             </p>
