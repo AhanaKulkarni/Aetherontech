@@ -1,0 +1,73 @@
+🔥 Replit Prompt for Aetheron.AI Website
+Build a multi-page futuristic website for Aetheron.AI — a visionary tech company solving real-world problems through AI-powered products and a project marketplace.
+
+The site must feel like a luxury tech experience — clean, bold, minimal, and magnetic.
+
+Use a deep black (#000000) base theme with electric blue (#1D8CF8) highlights.
+
+The vibe: NASA x Apple x Neo-Tokyo.
+
+It must feel expensive, intelligent, and impossible to ignore.
+
+💡 Key Features (MUST-HAVES):
+Spline 3D robot mascot that floats, breathes, or reacts to cursor — appears on Home, Footer, and transitions.
+
+GSAP scroll animations (cards, headers, reveals, parallax effects).
+
+Framer Motion transitions between pages for cinematic feel.
+
+TailwindCSS for a clean, scalable component system.
+
+Multi-page routing (React Router or Next.js) with the following pages:
+
+🧭 Pages:
+/ — Home:
+Hero with animated Spline robot, bold tagline:
+“Every Problem Has a Product.”
+CTA to Projects & Consulting.
+
+/projects — Marketplace:
+Filterable grid of frontier tech projects — glowing hover effects, clickable detail modals or pages.
+
+/project/ar-interior — AR App Showcase:
+Embedded video or animated mockup, breakdown of AI features, how it works, and Try Demo.
+
+/consultancy — Services:
+Promote Aetheron’s premium strategy & product consulting with categories like MVP, AI x AR, UI/UX flow design.
+
+/about — Our Vision:
+Studio-style storytelling page about Aetheron’s mission, origin, and future.
+
+/contact — Collab Page:
+Futuristic contact form, with glassmorphism inputs and a CTA to partner or book a discovery call.
+
+✨ UI & Experience Musts:
+Custom glowing cursor or magnetic pointer
+
+Page transitions with fade/scale effects
+
+Minimal navbar with hover glow
+
+Floating Spline robot footer
+
+Modern, editorial typography (like Satoshi or Space Grotesk)
+
+Optional: subtle ambient sound FX (muted by default)
+
+🛠️ Tech Stack Required:
+React or Next.js
+
+TailwindCSS
+
+GSAP
+
+Framer Motion
+
+Spline (3D animated embed)
+
+🧪 Bonus Ideas:
+Hidden Easter egg with Spline robot animation
+
+Floating particle background or matrix-grid effect (super subtle)
+
+Mobile responsive (but desktop-first feel)
