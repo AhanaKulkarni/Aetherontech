@@ -125,7 +125,7 @@ export default function Projects() {
                 onClick={() => setActiveFilter(filter.id)}
                 className={`px-6 py-3 rounded-lg font-semibold cursor-hover transition-all duration-300 ${
                   activeFilter === filter.id
-                    ? "electric-blue-bg text-black"
+                    ? "electric-blue-bg text-white"
                     : "glassmorphism hover:glow-effect"
                 }`}
               >

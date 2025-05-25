@@ -202,7 +202,7 @@ export default function Consultancy() {
               </p>
               <Link href="/contact" className="cursor-hover">
                 <Button className="steel-accent-bg hover:bg-[hsl(var(--steel-blue-light))] text-black px-8 py-3 rounded-xl font-normal text-base transition-all duration-300 subtle-glow">
-                  Start a Partnership
+                  Contact us!
                 </Button>
               </Link>
             </div>
