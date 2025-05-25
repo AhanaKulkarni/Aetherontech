@@ -32,6 +32,20 @@ export default function Home() {
       <div className="min-h-screen pt-20">
         {/* Hero Section */}
         <section className="hero-ambient min-h-screen flex items-center justify-center relative overflow-hidden">
+          {/* Particle Effect */}
+          <div className="particles">
+            {Array.from({ length: 15 }).map((_, i) => (
+              <div
+                key={i}
+                className="particle"
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  animationDelay: `${Math.random() * 20}s`,
+                }}
+              />
+            ))}
+          </div>
+          
           {/* Spline 3D Robot Background */}
           <div className="spline-container">
             <Spline
@@ -80,12 +94,12 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 1 }}
             >
               <Link href="/projects" className="cursor-hover">
-                <Button className="premium-button text-black px-8 py-3 rounded-xl font-medium text-base transition-all duration-300">
+                <Button className="premium-button text-black px-8 py-3 rounded-xl font-medium text-base button-scale">
                   Explore Marketplace
                 </Button>
               </Link>
               <Link href="/consultancy" className="cursor-hover">
-                <Button variant="outline" className="border-[hsl(var(--steel-blue))] text-[hsl(var(--steel-blue))] hover:bg-[hsl(var(--steel-blue))] hover:text-black px-8 py-3 rounded-xl font-medium text-base transition-all duration-300 glassmorphism">
+                <Button variant="outline" className="border-[hsl(var(--steel-blue))] text-[hsl(var(--steel-blue))] hover:bg-[hsl(var(--steel-blue))] hover:text-black px-8 py-3 rounded-xl font-medium text-base glassmorphism button-scale">
                   Partner With Us
                 </Button>
               </Link>
