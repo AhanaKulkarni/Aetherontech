@@ -85,7 +85,7 @@ export default function Home() {
                 </Button>
               </Link>
               <Link href="/consultancy" className="cursor-hover">
-                <Button variant="outline" className="border-[hsl(var(--steel-blue))] text-[hsl(var(--steel-blue))] hover:bg-[hsl(var(--steel-blue))] hover:text-black px-8 py-3 rounded-xl font-medium text-base transition-all duration-300 glassmorphism">
+                <Button variant="outline" className="border-[hsl(var(--electric-cyan))] text-[hsl(var(--electric-cyan))] hover:bg-[hsl(var(--electric-cyan))] hover:text-[hsl(var(--navy-blue))] px-8 py-3 rounded-xl font-medium text-base transition-all duration-300 glassmorphism">
                   Partner With Us
                 </Button>
               </Link>

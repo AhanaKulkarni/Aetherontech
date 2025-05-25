@@ -243,8 +243,8 @@
   }
 
   @keyframes glow {
-    0% { box-shadow: 0 0 20px rgba(143, 168, 178, 0.3); }
-    100% { box-shadow: 0 0 40px rgba(143, 168, 178, 0.6); }
+    0% { box-shadow: 0 0 20px rgba(74, 158, 255, 0.4); }
+    100% { box-shadow: 0 0 40px rgba(51, 224, 255, 0.7); }
   }
 
   .fade-in {
