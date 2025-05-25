@@ -9,6 +9,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import CustomCursor from "@/components/layout/CustomCursor";
 import LoadingScreen from "@/components/layout/LoadingScreen";
+import ScrollIndicator from "@/components/layout/ScrollIndicator";
 
 import Home from "@/pages/Home";
 import Projects from "@/pages/Projects";
@@ -57,6 +58,7 @@ function App() {
         <div className="dark">
           {loading && <LoadingScreen />}
           <CustomCursor />
+          <ScrollIndicator />
           <Router />
           <Toaster />
         </div>

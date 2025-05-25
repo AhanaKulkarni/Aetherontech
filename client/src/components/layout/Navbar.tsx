@@ -31,7 +31,7 @@ export default function Navbar() {
           {navItems.map((item) => (
             <Link key={item.path} href={item.path} className="cursor-hover">
               <span 
-                className={`nav-link text-sm ${
+                className={`nav-link text-sm nav-underline ${
                   location === item.path ? 'steel-accent' : ''
                 }`}
               >
@@ -42,7 +42,7 @@ export default function Navbar() {
         </div>
         
         <Link href="/contact" className="cursor-hover">
-          <Button className="steel-accent-bg hover:bg-[hsl(var(--steel-blue-light))] text-black px-6 py-2.5 rounded-xl font-normal text-sm transition-all duration-300 subtle-glow">
+          <Button className="steel-accent-bg hover:bg-[hsl(var(--steel-blue-light))] text-black px-6 py-2.5 rounded-xl font-normal text-sm button-scale subtle-glow">
             Connect
           </Button>
         </Link>

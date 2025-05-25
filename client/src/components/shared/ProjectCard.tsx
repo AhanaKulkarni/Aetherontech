@@ -32,7 +32,7 @@ export default function ProjectCard({
 
   return (
     <motion.div
-      className="project-card glassmorphism rounded-2xl overflow-hidden cursor-hover"
+      className="project-card glassmorphism rounded-2xl overflow-hidden cursor-hover project-card-glow"
       onClick={onClick}
       whileHover={{ y: -4 }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
