@@ -54,17 +54,17 @@ export default function Home() {
             </motion.div>
             
             <motion.h1 
-              className="text-5xl md:text-7xl font-space font-light mb-8 leading-tight"
+              className="text-5xl md:text-7xl font-space text-enhanced mb-8 leading-tight geometric-lines"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
               Transform Ideas Into
-              <span className="metallic-gradient block font-normal">Reality</span>
+              <span className="metallic-gradient block">Reality</span>
             </motion.h1>
             
             <motion.p 
-              className="text-lg md:text-xl text-white/70 mb-12 max-w-3xl mx-auto font-light leading-relaxed"
+              className="text-lg md:text-xl text-white/80 mb-12 max-w-3xl mx-auto font-normal leading-relaxed"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
@@ -80,12 +80,12 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 1 }}
             >
               <Link href="/projects" className="cursor-hover">
-                <Button className="steel-accent-bg hover:bg-[hsl(var(--steel-blue-light))] text-black px-8 py-3 rounded-xl font-normal text-base transition-all duration-300 subtle-glow">
+                <Button className="premium-button text-black px-8 py-3 rounded-xl font-medium text-base transition-all duration-300">
                   Explore Marketplace
                 </Button>
               </Link>
               <Link href="/consultancy" className="cursor-hover">
-                <Button variant="outline" className="border-[hsl(var(--steel-blue))] text-[hsl(var(--steel-blue))] hover:bg-[hsl(var(--steel-blue))] hover:text-black px-8 py-3 rounded-xl font-normal text-base transition-all duration-300">
+                <Button variant="outline" className="border-[hsl(var(--steel-blue))] text-[hsl(var(--steel-blue))] hover:bg-[hsl(var(--steel-blue))] hover:text-black px-8 py-3 rounded-xl font-medium text-base transition-all duration-300 glassmorphism">
                   Partner With Us
                 </Button>
               </Link>
