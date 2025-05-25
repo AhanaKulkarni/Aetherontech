@@ -174,14 +174,14 @@ export default function About() {
               </p>
               <div className="flex flex-col md:flex-row gap-6 justify-center">
                 <Link href="/projects" className="cursor-hover">
-                  <Button className="electric-blue-bg hover:bg-[hsl(var(--electric-blue-light))] text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 glow-effect">
-                    See Our Work
-                  </Button>
+                <Button className="steel-accent-bg hover:bg-[hsl(var(--steel-blue-light))] text-black px-8 py-3 rounded-xl font-normal text-base transition-all duration-300 subtle-glow">
+                  Our work
+                </Button>
                 </Link>
                 <Link href="/contact" className="cursor-hover">
-                  <Button variant="outline" className="border-[hsl(var(--electric-blue))] text-[hsl(var(--electric-blue))] hover:bg-[hsl(var(--electric-blue))] hover:text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
-                    Join Our Mission
-                  </Button>
+                <Button className="steel-accent-bg hover:bg-[hsl(var(--steel-blue-light))] text-black px-8 py-3 rounded-xl font-normal text-base transition-all duration-300 subtle-glow">
+                  Join us
+                </Button>
                 </Link>
               </div>
             </div>

@@ -169,16 +169,14 @@ export default function Projects() {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <div className="glassmorphism p-12 rounded-2xl max-w-4xl mx-auto">
-              <h3 className="text-3xl font-space font-bold mb-6">Have a Project in Mind?</h3>
+              <h3 className="text-3xl font-space font-bold mb-6">Have a Project in Mind</h3>
               <p className="text-xl text-gray-300 mb-8">
                 Join our marketplace and bring your revolutionary ideas to life with our expert team and cutting-edge technology.
               </p>
               <Link href="/contact" className="cursor-hover">
-<Button
-  className="bg-[hsl(var(--electric-blue))] hover:bg-[hsl(var(--electric-blue-light))] text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 glow-effect">
-  Connect with us!
-</Button>
-
+                <Button className="steel-accent-bg hover:bg-[hsl(var(--steel-blue-light))] text-black px-8 py-3 rounded-xl font-normal text-base transition-all duration-300 subtle-glow">
+                  Connect with us!
+                </Button>
               </Link>
             </div>
           </motion.div>
