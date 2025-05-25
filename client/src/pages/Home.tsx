@@ -3,10 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import Spline from '@splinetool/react-spline';
-
 export default function Home() {
-  const [splineLoaded, setSplineLoaded] = useState(false);
   const [currentText, setCurrentText] = useState("");
   const fullText = "Welcome to Aetheron.AI";
 
@@ -46,13 +43,7 @@ export default function Home() {
             ))}
           </div>
           
-          {/* Spline 3D Robot Background */}
-          <div className="spline-container">
-            <Spline
-              scene="https://prod.spline.design/geJZ9gfFaLE-jHnx/scene.splinecode"
-              onLoad={() => setSplineLoaded(true)}
-            />
-          </div>
+          
 
           <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
             <motion.div
