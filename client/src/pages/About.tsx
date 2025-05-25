@@ -30,22 +30,16 @@ export default function About() {
 
   const team = [
     {
+      initials: "AP",
+      name: "Ayush Pardeshi",
+      role: "CEO-Director-Founder",
+      description: "Former CEO of Aetheron.AI. The Visionary behind everything.."
+    },
+    {
       initials: "AK",
-      name: "Alex Kim",
-      role: "CEO & Co-Founder",
-      description: "Former Tesla AI Lead, MIT PhD in Machine Learning. Visionary behind our breakthrough neural architectures."
-    },
-    {
-      initials: "SC",
-      name: "Sarah Chen",
-      role: "CTO & Co-Founder",
-      description: "Ex-Google Research, Stanford CS. Pioneer in quantum-classical hybrid computing and AR/VR systems."
-    },
-    {
-      initials: "MR",
-      name: "Marcus Rodriguez",
-      role: "Chief Design Officer",
-      description: "Former Apple Design Team, IDEO veteran. Master of human-centered design and luxury tech experiences."
+      name: "Ahana Kulkarni",
+      role: "CTO & Director",
+      description: " Ideated by CEO, built by her."
     }
   ];
 
@@ -82,13 +76,11 @@ export default function About() {
               </h2>
               <div className="space-y-6 text-lg text-gray-300">
                 <p>
-                  Founded in 2024 by a team of visionary engineers and designers, Aetheron.AI emerged from a simple 
-                  yet powerful belief: artificial intelligence should amplify human creativity, not replace it.
+                  Founded in 2024 by our visionary CEO, Mr. Ayush Pardeshi, alongside Director Ms. Ahana Kulkarni and a talented team of seven, 
+                  Aetheron.AI was born from a bold and inspiring belief: artificial intelligence exists to amplify human creativity, not replace it.
                 </p>
-                <p>
-                  Our journey began in a small lab in San Francisco, where we witnessed firsthand the transformative 
-                  power of AI when combined with human ingenuity. Today, we're a global force driving innovation 
-                  across industries.
+                <p>Our journey began during the third semester of engineering college, where we experienced firsthand the transformative power of artificial intelligence when paired with human creativity and ingenuity. 
+                  What started as a shared passion among close friends has evolved into a dedicated team driven by innovation, collaboration, and a commitment to shaping the future through cutting-edge technology.
                 </p>
                 <p>
                   Every project we undertake is guided by our core principle: technology should solve real problems 
