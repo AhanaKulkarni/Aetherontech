@@ -33,7 +33,7 @@ export default function About() {
       initials: "AP",
       name: "Ayush Pardeshi",
       role: "CEO-Director-Founder",
-      description: "Former CEO of Aetheron.AI. The Visionary behind everything.."
+      description: "Visionary behind everything.."
     },
     {
       initials: "AK",
