@@ -1,9 +1,10 @@
-import { Switch, Route } from "wouter";
+import { Switch, Route, useLocation } from "wouter";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { queryClient } from "./lib/queryClient";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { AnimatePresence } from "framer-motion";
+import { Helmet } from "react-helmet";
 
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -22,10 +23,55 @@ import NotFound from "@/pages/not-found";
 import { useEffect, useState } from "react";
 
 function Router() {
+  const [location] = useLocation();
+
+  const pageSEO = {
+    "/": {
+      title: "Aetheron AI - Every Problem Has a Product",
+      description:
+        "Transform visionary ideas into groundbreaking products through cutting-edge artificial intelligence and innovative design.",
+    },
+    "/projects": {
+      title: "Projects - Aetheron AI",
+      description: "Explore cutting-edge AI projects by Aetheron AI.",
+    },
+    "/project/ar-interior": {
+      title: "AR Interior Project - Aetheron AI",
+      description: "Discover our augmented reality interior design solutions.",
+    },
+    "/consultancy": {
+      title: "Consultancy - Aetheron AI",
+      description: "Get expert AI consultancy services at Aetheron AI.",
+    },
+    "/about": {
+      title: "About Us - Aetheron AI",
+      description: "Learn about Aetheron AI and our mission.",
+    },
+    "/contact": {
+      title: "Contact - Aetheron AI",
+      description: "Reach out to Aetheron AI for inquiries and support.",
+    },
+    notfound: {
+      title: "Page Not Found - Aetheron AI",
+      description: "The page you are looking for does not exist.",
+    },
+  };
+
+  const seo = pageSEO[location as keyof typeof pageSEO] ?? pageSEO["notfound"];
+
   return (
     <div className="min-h-screen bg-black text-white">
+      <Helmet>
+        <title>{seo.title}</title>
+        <meta name="description" content={seo.description} />
+        <meta property="og:title" content={seo.title} />
+        <meta property="og:description" content={seo.description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://aetheronai.online${location}`} />
+      </Helmet>
+
       <Navbar />
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode="wait" initial={false}>
         <Switch>
           <Route path="/" component={Home} />
           <Route path="/projects" component={Projects} />
